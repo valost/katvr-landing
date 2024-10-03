@@ -1,4 +1,6 @@
-# Base layout template with Gulp, SCSS and Stylelint
-1. Create a repo using this template
-1. Replace `<your_account>` and `<repo_name>` with your Github username and the new repo name
-    - [DEMO LINK](https://<your_account>.github.io/<repo_name>/)
+# Description
+
+This landing page showcases the KAT VR product, designed to be responsive across mobile (>320px), tablet (768px), and desktop (1280px and 1920px) screen sizes. 
+It is built using HTML, CSS, and JavaScript.
+
+[DEMO LINK](https://valost.github.io/katvr-landing/)
