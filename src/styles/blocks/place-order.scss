@@ -37,8 +37,13 @@
     }
   }
 
+<<<<<<< HEAD
   &__input-wrapper {
     position: relative;
+=======
+  &__input {
+    padding-bottom: 19px;
+>>>>>>> origin/master
 
     @include on-tablet {
       grid-column: span 3;
@@ -49,6 +54,7 @@
     }
   }
 
+<<<<<<< HEAD
   &__input {
     padding-bottom: 19px;
     width: 100%;
@@ -92,6 +98,8 @@
     }
   }
 
+=======
+>>>>>>> origin/master
   &__sum {
     display: flex;
     flex-direction: column;

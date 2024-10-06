@@ -1,7 +1,0 @@
-.main {
-  @include section-grid;
-
-  &__content {
-    grid-column: 1 / -1;
-  }
-}
