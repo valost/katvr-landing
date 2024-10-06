@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleClasses(techSpecs3, 'tech__specs--visible');
   });
 
-<<<<<<< HEAD
   function toggleScroll() {
     const body = document.querySelector('body');
     const header = document.querySelector('header');
@@ -105,17 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('hashchange', toggleScroll);
   window.addEventListener('load', toggleScroll);
-=======
-  const dropdown = document.querySelectorAll('.dropdown');
-  const dropdownButton = document.querySelectorAll('.dropdown__arrow-button');
-
-  for (let i = 0; i < dropdownButton.length; i++) {
-    dropdownButton[i].addEventListener('click', (event) => {
-      event.preventDefault();
-      dropdown[i].classList.toggle('dropdown--active');
-    });
-  }
->>>>>>> origin/master
 
   const questions = document.querySelectorAll('.faq__question');
 
@@ -138,37 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-<<<<<<< HEAD
-=======
-  const expDateInput = document.getElementById('expiration-date');
-
-  expDateInput.addEventListener('input', (event) => {
-    let value = event.target.value.replace(/\D/g, '');
-
-    if (value.length >= 2) {
-      value = value.slice(0, 2) + '/' + value.slice(2);
-    }
-
-    event.target.value = value;
-  });
-
-  expDateInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Backspace' && event.target.value.length === 3) {
-      event.target.value = event.target.value.slice(0, 2);
-    }
-  });
-
-  const cardNumber = document.querySelectorAll('.pay__card-input');
-
-  cardNumber.forEach((input, index) => {
-    input.addEventListener('input', () => {
-      if (input.value.length === 4 && index < cardNumber.length - 1) {
-        cardNumber[index + 1].focus();
-      }
-    });
-  });
-
->>>>>>> origin/master
   const buyNowButtons = document.querySelectorAll('.buy-button');
   const cartCloseButtons = document.querySelectorAll('.cart__close');
 
@@ -198,14 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   purchaseButton1.addEventListener('click', (event) => {
     event.preventDefault();
-<<<<<<< HEAD
 
     if (purchaseButton1.disabled) {
       return;
     }
 
-=======
->>>>>>> origin/master
     tabsPlaceOrder.forEach(tab => {
       tab.classList.remove('cart__tab--active');
     });
@@ -250,7 +204,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-<<<<<<< HEAD
   const dropdowns = document.querySelectorAll('.dropdown');
   const dropdownButtons = document.querySelectorAll('.dropdown__arrow-button');
 
@@ -587,29 +540,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-=======
-  function toggleScroll() {
-    const body = document.querySelector('body');
-    const header = document.querySelector('header');
-    const currentHash = window.location.hash;
-    const isDesktop = window.innerWidth >= 1280;
-
-    if (['#menu', '#language', '#help', '#faq', '#cart'].includes(currentHash)) {
-      body.classList.add('no-scroll');
-
-      if (isDesktop) {
-        header.style.filter = 'blur(5px)';
-      }
-    } else {
-      body.classList.remove('no-scroll');
-
-      if (isDesktop) {
-        header.style.filter = 'blur(0)';
-      }
-    }
-  };
-
-  window.addEventListener('hashchange', toggleScroll);
-  window.addEventListener('load', toggleScroll);
->>>>>>> origin/master
 });
