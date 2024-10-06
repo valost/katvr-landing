@@ -37,8 +37,8 @@
     }
   }
 
-  &__input {
-    padding-bottom: 19px;
+  &__input-wrapper {
+    position: relative;
 
     @include on-tablet {
       grid-column: span 3;
@@ -46,6 +46,49 @@
 
     @include on-desktop {
       grid-column: span 4;
+    }
+  }
+
+  &__input {
+    padding-bottom: 19px;
+    width: 100%;
+
+    // @include on-tablet {
+    //   grid-column: span 3;
+    // }
+
+    // @include on-desktop {
+    //   grid-column: span 4;
+    // }
+  }
+
+  &__input-error {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 60px;
+
+    font-size: 10px;
+    color: $color-red;
+
+    @include on-tablet {
+      top: 70px;
+    }
+  }
+
+  &__dropdown-error {
+    display: none;
+
+    position: absolute;
+    left: 0;
+    top: 60px;
+
+    font-size: 10px;
+    color: $color-red;
+
+    @include on-tablet {
+      top: 70px;
     }
   }
 

@@ -3,6 +3,21 @@
     font-size: 14px;
   }
 
+  // &__input-wrapper {
+  //   position: relative;
+
+  //   display: flex;
+  //   flex-direction: column;
+
+  //   @include on-tablet {
+  //     grid-column: span 3;
+  //   }
+
+  //   @include on-desktop {
+  //     grid-column: span 4;
+  //   }
+  // }
+
   &__input {
     background-color: transparent;
     border: none;

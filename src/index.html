@@ -529,10 +529,10 @@
           <div class="cart__img"></div>
 
           <div class="cart__order-price">
-            <div class="cart__dropdown">
+            <div class="cart__dropdown" id="dropdown-quantity">
               <div class="dropdown">
                 <p class="dropdown__label">Quantity</p>
-                <a
+                <button
                   href="#"
                   class="dropdown__arrow-button arrow-button__quantity"
                 >
@@ -542,7 +542,7 @@
                     alt="Down arrow"
                     class="dropdown__icon"
                   />
-                </a>
+                </button>
 
                 <div class="dropdown__content cart__dropdown-content">
                   <ul class="dropdown__list cart__dropdown-list">
@@ -573,63 +573,76 @@
             method="post"
             onsubmit="this.reset(); return false"
           >
-            <input
-              class="form__input place-order__input"
-              type="text"
-              id="buyers-first-name"
-              name="first-name"
-              placeholder="First Name*"
-              autocomplete="off"
-              required
-            />
+            <div class="place-order__input-wrapper">
+              <input
+                class="form__input place-order__input"
+                type="text"
+                id="buyers-first-name"
+                name="first-name"
+                placeholder="First Name*"
+                autocomplete="off"
+                required
+              />
+              <span id="first-name-error" class="place-order__input-error"></span>
+            </div>
 
-            <input
-              class="form__input place-order__input"
-              type="text"
-              id="buyers-last-name"
-              name="last-name"
-              placeholder="Last Name*"
-              autocomplete="off"
-              required
-            />
+            <div class="place-order__input-wrapper">
+              <input
+                class="form__input place-order__input"
+                type="text"
+                id="buyers-last-name"
+                name="last-name"
+                placeholder="Last Name*"
+                autocomplete="off"
+                required
+              />
+              <span id="last-name-error" class="place-order__input-error"></span>
+            </div>
 
-            <input
-              class="form__input place-order__input"
-              type="text"
-              id="buyers-email"
-              name="email"
-              placeholder="Email*"
-              autocomplete="off"
-              required
-            />
+            <div class="place-order__input-wrapper">
+              <input
+                class="form__input place-order__input"
+                type="text"
+                id="buyers-email"
+                name="email"
+                placeholder="Email*"
+                autocomplete="off"
+                required
+              />
+              <span id="email-error" class="place-order__input-error"></span>
+            </div>
 
-            <input
-              class="form__input place-order__input"
-              type="text"
-              id="buyers-phone"
-              name="phone"
-              placeholder="Phone*"
-              autocomplete="off"
-              required
-            />
+            <div class="place-order__input-wrapper">
+              <input
+                class="form__input place-order__input"
+                type="text"
+                id="buyers-phone"
+                name="phone"
+                placeholder="Phone*"
+                autocomplete="off"
+                required
+              />
+              <span id="phone-error" class="place-order__dropdown-error"></span>
+            </div>
 
             <div
               class="dropdown place-order__dropdown"
               id="dropdown-countries"
             >
               <p class="place-order__caption">Country*</p>
-              <a
+              <button
                 href="#"
                 class="dropdown__arrow-button arrow-button__countries"
               >
-                United States
+                Select country
 
                 <img
                   src="./images/blue-icons/down-icon.svg"
                   alt="Down arrow"
                   class="dropdown__icon"
                 />
-              </a>
+              </button>
+              <span id="dropdown-country-error" class="place-order__input-error"></span>
 
               <div class="dropdown__content cart__dropdown-content">
                 <ul class="dropdown__list--geo cart__dropdown-list">
@@ -651,16 +664,17 @@
               id="dropdown-cities"
             >
               <p class="place-order__caption">City*</p>
-              <a
+              <button
                 href="#"
-                class="dropdown__arrow-button arrow-button__cities"
+                class="dropdown__arrow-button arrow-button__countries"
               >
+                Select city
                 <img
                   src="./images/blue-icons/down-icon.svg"
                   alt="Down arrow"
                   class="dropdown__icon"
                 />
-              </a>
+              </button>
 
               <div class="dropdown__content cart__dropdown-content">
                 <ul class="dropdown__list--geo cart__dropdown-list">
@@ -676,34 +690,39 @@
               </div>
             </div>
 
-            <input
-              class="form__input place-order__input"
-              type="text"
-              id="buyers-address-1"
-              name="address-1"
-              placeholder="Shipping Address*"
-              autocomplete="off"
-              required
-            />
+            <div class="place-order__input-wrapper">
+              <input
+                class="form__input place-order__input"
+                type="text"
+                id="buyers-address-1"
+                name="address-1"
+                placeholder="Shipping Address*"
+                autocomplete="off"
+                required
+              />
+              <span id="address-error" class="place-order__input-error"></span>
+            </div>
 
-            <input
-              class="form__input place-order__input"
-              type="text"
-              id="buyers-address-2"
-              name="address-2"
-              placeholder="Shipping Address 2"
-              autocomplete="off"
-              required
-            />
+            <div class="place-order__input-wrapper">
+              <input
+                class="form__input place-order__input"
+                type="text"
+                id="buyers-address-2"
+                name="address-2"
+                placeholder="Shipping Address 2"
+                autocomplete="off"
+              />
+            </div>
           </form>
 
-          <a
+          <button
             href="#"
             class="cart__purchase-button"
             id="place-order-button"
+            disabled
           >
             Purchase
-          </a>
+          </button>
         </div>
 
         <div
@@ -766,6 +785,7 @@
                   class="pay__icon"
                 />
               </div>
+              <span id="card-number-error" class="pay__input-error-1"></span>
             </div>
 
             <div class="pay__input-wrapper">
@@ -778,6 +798,7 @@
                 autocomplete="off"
                 required
               />
+              <span id="card-holder-error" class="pay__input-error-2"></span>
             </div>
 
             <div class="pay__input-container">
@@ -790,10 +811,11 @@
                   name="expiration-date"
                   placeholder="MM/YY"
                   maxlength="5"
-                  pattern="\d{2}/\d{2}"
                   required
                 />
+                <span id="expiration-date-error" class="pay__input-error-3"></span>
               </div>
+
 
               <div class="pay__input-wrapper">
                 <p class="pay__input-label">CVV*</p>
@@ -803,21 +825,22 @@
                   id="cvv"
                   name="cvv"
                   placeholder="000"
-                  maxlength="4"
-                  pattern="\d{3,4}"
+                  maxlength="3"
                   required
                 />
+                <span id="cvv-error" class="pay__input-error-3"></span>
               </div>
             </div>
           </form>
 
-          <a
+          <button
             href="#"
             class="cart__purchase-button"
             id="pay-button"
+            disabled
           >
             Purchase
-          </a>
+          </button>
         </div>
 
         <div
