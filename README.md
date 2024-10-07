@@ -8,7 +8,9 @@ This landing page showcases the KAT VR product and is built using HTML, CSS, and
 The landing page is designed to be fully responsive across mobile (>320px), tablet (768px), and desktop (1280px and 1920px) screen sizes. It is divided into the following sections:
 
 'About': Introduces the product to viewers.
+
 'Tech': Highlights the product's key technical features.
+
 'Benefits': Outlines the product's advantages.
 
 Additionally, the 'Buy now' button redirects users to a 'Cart' page, where they can fill out a form to purchase the product. The 'Place order' step requires users to fill in all the necessary information to proceed to the next step.
