@@ -18,6 +18,7 @@ Note: The 'Country' and 'City' dropdowns are not mandatory and are included for 
 The 'Pay' step requires valid credit card information. You can use the following test card numbers, which pass the Luhn algorithm for checking credit card validity:
 
 Visa: 4111 1111 1111 1111
+
 MasterCard: 5555 5555 5555 4444
 
 # Dependencies
@@ -38,8 +39,10 @@ Run npm start to launch the development server.
 
 For common issues, ensure that:
 
-You are using the correct Node.js version (v14.21.3).
-The main dependencies are correctly installed by running npm install.
-The development server should start without errors using npm start.
+- you are using the correct Node.js version (v14.21.3).
+
+- the main dependencies are correctly installed by running npm install.
+
+- the development server should start without errors using npm start.
 
 If you encounter any issues or need assistance, feel free to reach out at valostrovska@gmail.com.
